@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 3 - HTML</title>
+    <style>
+      table,tr,td{
+        border: 20px solid white;
+        border-collapse: collapse;
+        padding:3px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .row{
+  display:flex;
+}
+            .row{
+                flex-direction: column;
+            }
+            table,tr,td{
+        border: 2px solid white;
+        border-collapse: collapse;
+      }
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <table>
+      <tr class="row">
+        <td> <div class="text_field">
+          <label>First Name:</label><br>
+          <input type="text" name="FirstName" value="">
+      </div></td>
+        <td><div class="text_field">
+          <label>Last Name:</label><br>
+          <input type="text" name="LastName" value="">
+      </div></td>
+      </tr>
+      <tr class="row">
+        <td>   <div class="text_field">
+          <label>Email:</label><br>
+          <input type="email" name="email" id="email">
+      </div></td>
+        <td>  <div class="text_field">
+          <label>Contact Number:</label><br>
+          <input type="tel" name="phone" id="phone">
+      </div></td>
+      </tr>
+      <tr class="row">
+        <td><div class="text_field">
+          <label>Username:</label><br>
+          <input type="text" name="username" required >
+        </div></td>
+        <td><div class="text_field">
+          <label>Password:</label><br>
+          <input type="password" name="password" required >
+        </div></td>
+      </tr>
+      <tr class="row">
+        <td>
+            <div class="text_field">
+              <label>Address:</label><br>
+              <textarea id="address" name="address"></textarea>
+           </div>
+      </td>
+        <td>
+         <div class="text_field">
+          <label>Gender:</label><br>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+         </div>
+    </td>
+      </tr>
+      <tr class="row">
+        <td><div class="text_field">
+          <label>Qualification:</label><br>
+          <select>
+            <option value="select">--Select--</option>
+            <option value="secondary education">Secondary Education</option>
+            <option value="higher secondary education"> Higher Secondary Education</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="postgraduate">Postgraduate</option>
+          </select>
+        </div></td>
+        <td><div class="text_field">
+          <label>Experience:</label><br>
+          <select>
+            <option value="select">--Select--</option>
+            <option value="fresher">Fresher</option>
+            <option value="1 year">1 year</option>
+            <option value="2 years">2 years</option>
+            <option value="3 years">3 years</option>
+          </select>
+        </div></td>
+      </tr>
+      <tr class="row">
+        <td colspan="2"><div class="text_field">
+          <label>Coding Languages:</label>&nbsp;
+          <span class="row2">
+          <input type="checkbox" name="coding language" value="c/c++">C/C++
+          <input type="checkbox" name="coding language" value="java">Java
+          <input type="checkbox" name="coding language" value="c#">C#
+          <input type="checkbox" name="coding language" value="php">PHP
+          <input type="checkbox" name="coding language" value="python">Python
+        </span>
+        </div>
+       </td>
+      </tr>
+      <tr class="row">
+        <td colspan="2">
+          <div>
+            <button>Submit</button>
+          </div>
+        </td>
+      </tr>
+      
+    </table>
+ </div>
+    
+</body>
+</html>
