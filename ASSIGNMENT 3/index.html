@@ -11,14 +11,29 @@
         padding:3px;
       }
 
+      .r1{
+        float:left;
+      }
+      .r2{
+        float:center;
+      }
+     
       @media only screen and (max-width: 600px) {
+     .row{
+          display:flex;
+     }
+    
+    .r1{
+         float:none;
+    }
+    .r2{
+        float:none;
+    }
+
         .row{
-  display:flex;
-}
-            .row{
-                flex-direction: column;
+             flex-direction: column;
             }
-            table,tr,td{
+       table,tr,td{
         border: 2px solid white;
         border-collapse: collapse;
       }
@@ -27,9 +42,12 @@
 </head>
 <body>
   <div class="container">
+
+  <!-- using forms concept like label, input type, submit   -->
+    <form>
     <table>
       <tr class="row">
-        <td> <div class="text_field">
+        <td> <div class="text_field">  <!--Keeping all of the labels inside same class called text_field-->
           <label>First Name:</label><br>
           <input type="text" name="FirstName" value="">
       </div></td>
@@ -68,8 +86,14 @@
         <td>
          <div class="text_field">
           <label>Gender:</label><br>
+        
+          <div class="r1">
           <input type="radio" name="gender" value="male">Male
+        </div>
+          <div class="r2">
           <input type="radio" name="gender" value="female">Female
+        </div>
+        
          </div>
     </td>
       </tr>
@@ -88,13 +112,14 @@
           <label>Experience:</label><br>
           <select>
             <option value="select">--Select--</option>
-            <option value="fresher">Fresher</option>
-            <option value="1 year">1 year</option>
-            <option value="2 years">2 years</option>
-            <option value="3 years">3 years</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advance">Advance</option>
+            
           </select>
         </div></td>
       </tr>
+      
       <tr class="row">
         <td colspan="2"><div class="text_field">
           <label>Coding Languages:</label>&nbsp;
@@ -108,15 +133,20 @@
         </div>
        </td>
       </tr>
+
+
       <tr class="row">
         <td colspan="2">
           <div>
-            <button>Submit</button>
+            <input type="submit" value="Submit" />  <!--on clicking it will submit the form-->
           </div>
         </td>
       </tr>
       
     </table>
+  </form>
+<!-- form tag ended -->
+ 
  </div>
     
 </body>
