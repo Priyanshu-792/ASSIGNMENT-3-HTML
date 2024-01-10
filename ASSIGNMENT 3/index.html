@@ -11,28 +11,38 @@
         padding:3px;
       }
 
+      /* This r1 and r2 is used to style and give proper position of to genders that is male and female. */
       .r1{
         float:left;
       }
       .r2{
         float:center;
       }
-     
+
+      /* This  lang1 and lang2 id styling is used to style chckbox and place in correct position */
+     #lang1{
+float:left;
+     }
+     #lang2{
+float:right;
+     }
+
+
+     /* to apply responsive property media query is used which will pe implemented if the screen size is less than equal to 600px width. */
       @media only screen and (max-width: 600px) {
      .row{
           display:flex;
+          flex-direction: column;
      }
     
-    .r1{
+    .r1, .r2{
          float:none;
     }
-    .r2{
-        float:none;
-    }
-
-        .row{
-             flex-direction: column;
-            }
+   
+    #lang1, #lang2{
+float:none;
+     }
+   
        table,tr,td{
         border: 2px solid white;
         border-collapse: collapse;
@@ -44,7 +54,7 @@
   <div class="container">
 
   <!-- using forms concept like label, input type, submit   -->
-    <form>
+    <form action="#">
     <table>
       <tr class="row">
         <td> <div class="text_field">  <!--Keeping all of the labels inside same class called text_field-->
@@ -86,8 +96,9 @@
         <td>
          <div class="text_field">
           <label>Gender:</label><br>
-        
-          <div class="r1">
+
+          <!-- This class r1 and r2 will be used in responsive mode to bring male and female in 2 rows -->
+          <div class="r1"> 
           <input type="radio" name="gender" value="male">Male
         </div>
           <div class="r2">
@@ -122,14 +133,20 @@
       
       <tr class="row">
         <td colspan="2"><div class="text_field">
+
+      <!-- making two ids for giving styling to checkboxes -->
+         <div id="lang1">
           <label>Coding Languages:</label>&nbsp;
+        </div>
+        <div id="lang2">
           <span class="row2">
-          <input type="checkbox" name="coding language" value="c/c++">C/C++
-          <input type="checkbox" name="coding language" value="java">Java
-          <input type="checkbox" name="coding language" value="c#">C#
-          <input type="checkbox" name="coding language" value="php">PHP
-          <input type="checkbox" name="coding language" value="python">Python
+             <input type="checkbox" name="coding language" value="c/c++">C/C++
+             <input type="checkbox" name="coding language" value="java">Java
+            <input type="checkbox" name="coding language" value="c#">C#
+            <input type="checkbox" name="coding language" value="php">PHP
+            <input type="checkbox" name="coding language" value="python">Python
         </span>
+      </div>
         </div>
        </td>
       </tr>
